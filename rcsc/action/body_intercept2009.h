@@ -34,6 +34,7 @@
 
 #include <rcsc/player/soccer_action.h>
 #include <rcsc/player/intercept_table.h>
+#include <rcsc/player/intercept.h>
 #include <rcsc/common/player_type.h>
 #include <rcsc/geom/vector_2d.h>
 
@@ -86,10 +87,10 @@ private:
       \param table const pointer to the cached table
       \return interception info object
     */
-    InterceptInfo getBestIntercept( const WorldModel & wm,
+    Intercept getBestIntercept( const WorldModel & wm,
                                     const InterceptTable * table ) const;
 
-    InterceptInfo getBestIntercept_Test( const WorldModel & wm,
+    Intercept getBestIntercept_Test( const WorldModel & wm,
                                          const InterceptTable * table ) const;
 
     /*!
@@ -101,7 +102,7 @@ private:
     */
     bool doWaitTurn( PlayerAgent * agent,
                      const Vector2D & target_point,
-                     const InterceptInfo & info );
+                     const Intercept & info );
 
     /*!
       \brief adjutment dash action. if possible try to perform turn action.
@@ -112,7 +113,7 @@ private:
     */
     bool doInertiaDash( PlayerAgent * agent,
                         const Vector2D & target_point,
-                        const InterceptInfo & info );
+                        const Intercept & info );
 
 };
 
