@@ -15,6 +15,7 @@ SUBDIRS = \
 	common \
 	monitor \
 	player \
+	action\
 	coach \
 	trainer \
 	.
@@ -25,6 +26,7 @@ librcsc_la_SOURCES =
 
 librcsc_la_LIBADD = \
 	geom/librcsc_geom.la \
+	action/librcsc_action.la \
 	gz/librcsc_gz.la \
 	net/librcsc_net.la \
 	time/librcsc_time.la \

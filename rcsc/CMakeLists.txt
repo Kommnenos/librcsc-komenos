@@ -1,6 +1,7 @@
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON) # need for linking OBJCET libraries to a shared library
 
+add_subdirectory(action)
 add_subdirectory(util)
 add_subdirectory(geom)
 add_subdirectory(gz)
@@ -33,6 +34,7 @@ add_library(rcsc SHARED
   $<TARGET_OBJECTS:rcsc_color>
   $<TARGET_OBJECTS:rcsc_common>
   $<TARGET_OBJECTS:rcsc_monitor>
+  $<TARGET_OBJECTS:rcsc_action>
   $<TARGET_OBJECTS:rcsc_player>
   $<TARGET_OBJECTS:rcsc_coach>
   $<TARGET_OBJECTS:rcsc_trainer>
