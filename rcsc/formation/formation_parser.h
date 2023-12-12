@@ -99,7 +99,7 @@ protected:
     bool checkPositionPair( const Formation::ConstPtr ptr );
 
 
-private:
+public:
 
     /*!
       \brief create formation parser instance according to the header data
